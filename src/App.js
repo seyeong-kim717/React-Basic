@@ -23,6 +23,17 @@ class App extends Component {
         <img src={kim} alt="김구라 이미지" />
         <p>당신은 {isMan ? "남자" : "여자"} 이군요</p>
         <p>{isMan && "당신은 남자 이군요"}</p>
+        {/*
+          [ 이벤트 처리 ]
+          onEventName={ 화살표 함수 }
+          처럼 on 다음에 이벤트 명을 camel case로 작성을 한다.
+          화살표 함수는 해당이벤트가 발생하면 자동으로 호출 된다.
+          예 ) onClick, onMouseOver, onChange, onInput, onKeyDown, onFocus
+        */}
+        <button className="btn btn-outline-primary" onClick={()=>{
+          alert("버튼을 눌렀네요?");
+        }}>
+          눌러보셈</button>
     </div>
     );
   }
